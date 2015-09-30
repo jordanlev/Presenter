@@ -31,4 +31,13 @@ abstract class Presenter {
 		return $this->entity->{$property};
 	}
 
+	/**
+	 * Support `isset` for property-style retrieval (needed for Twig templates)
+	 * 
+	 * @param $property
+	 * @return boolean
+	 */
+	public function __isset($property) {
+		return isset($this->entity->{$property});
+	}
 } 

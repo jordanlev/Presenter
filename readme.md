@@ -14,7 +14,7 @@ Pull this package in through Composer.
 ```js
 {
     "require": {
-        "jordanlev/Presenter": "0.2.*"
+        "laracasts/presenter": "0.2.*"
     }
 }
 ```

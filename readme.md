@@ -14,7 +14,7 @@ Pull this package in through Composer.
 ```js
 {
     "require": {
-        "jordanlev/presenter": "0.2.*"
+        "jordanlev/presenter": "dev-master"
     },
     "repositories": [
         {

@@ -14,8 +14,13 @@ Pull this package in through Composer.
 ```js
 {
     "require": {
-        "laracasts/presenter": "0.2.*"
-    }
+        "jordanlev/presenter": "0.2.*"
+    },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/jordanlev/Presenter.git"
+    ]
 }
 ```
 

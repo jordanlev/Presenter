@@ -1,6 +1,6 @@
 <?php namespace Laracasts\Presenter;
 
-abstract class Presenter {
+abstract class Presenter implements \Illuminate\Contracts\Routing\UrlRoutable {
 
 	/**
 	 * @var mixed
@@ -39,5 +39,15 @@ abstract class Presenter {
 	 */
 	public function __isset($property) {
 		return isset($this->entity->{$property});
+	}
+	
+	/**
+	 * Allow presenter objects to be passed into the 'route' method and have its id extracted
+	 */
+	public function getRouteKey() {
+		return $this->entity->getAttribute($this->getRouteKeyName());
+	}
+	public function getRouteKeyName() {
+		return $this->entity->getKeyName();
 	}
 } 
